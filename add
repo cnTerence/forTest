@@ -1,0 +1,3 @@
+var doSth = function(){
+	alert(document.title);
+};

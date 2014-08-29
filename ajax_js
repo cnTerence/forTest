@@ -10,7 +10,7 @@ var ajax = null;
 	  	"MSXML2.XMLHTTP.4.0",
 	  	"MSXML2.XMLHTTP.3.0",
 	  	"MSXML2.XMLHTTP",
-    	"Microsoft.XMLHTTP"
+	  	"Microsoft.XMLHTTP"
   	],
   	
   	var httpPool = [];
@@ -92,7 +92,7 @@ var ajax = null;
     
     	http.send(param);
     };
-	};
-	
-	o = new AjaxClass();
+  };
+  
+  o = new AjaxClass();
 })(ajax);

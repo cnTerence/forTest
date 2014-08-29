@@ -65,7 +65,7 @@ var ajax = null;
 			http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			http.onreadystatechange = function(){
 				if(4 == http.readyState){
-					if(200 == http.readyState){
+					if(200 == http.status){
 						scsCall(http);
 					}else{
 						if(failCall){

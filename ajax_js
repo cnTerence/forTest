@@ -55,10 +55,10 @@ var ajax = {
     }
   },
   
-  sendHttp : function(url, scsCall, isPost, isAnsyc, paramAry, failCall){
+  sendHttp : function(url, scsCall, method, isAnsyc, paramAry, failCall){
     var http = getHttpInstance();
-    var method = isPost ? "post" : "get";
-    isAnsyc = isAnsyc ? true : false;
+    method = method ? method : "get";
+    isAnsyc = isAnsyc ? isAnsyc : false;
     
     http.open(method, url, isAnsyc);
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

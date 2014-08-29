@@ -1,0 +1,31 @@
+var byteReader = null;
+(function(){
+
+  var byteReaderClass = function(){
+    
+    this.read = function(byte, crset){
+      var stream = new ActiveXObject("adodb.stream");
+      //处理字节流
+      stream.Type = 1;
+      //读写模式
+      stream.Mode = 3;
+      //打开对象
+      stream.Open();
+      //载入处理流
+      stream.Write(byte);
+      
+      //指针指向开始
+      stream.Position = 0;
+      //转换字符流处理
+      stream.Type = 2;
+      //设置字符集
+      stream.Charset = crset;
+      //读取字符
+      var data = stream.ReadText();
+      stream.close();
+      return data;
+    };
+  };
+  
+  byteReader = new byteReaderClass();
+})();

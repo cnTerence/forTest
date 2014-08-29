@@ -3,7 +3,7 @@ var byteReader = null;
 
   var byteReaderClass = function(){
     
-    this.read = function(byte, crset){
+    this.read = function(byteAry, crset){
       var stream = new ActiveXObject("adodb.stream");
       //处理字节流
       stream.Type = 1;
@@ -12,7 +12,7 @@ var byteReader = null;
       //打开对象
       stream.Open();
       //载入处理流
-      stream.Write(byte);
+      stream.Write(byteAry);
       
       //指针指向开始
       stream.Position = 0;

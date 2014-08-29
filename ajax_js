@@ -62,7 +62,6 @@ var ajax = null;
 			isAnsyc = isAnsyc ? isAnsyc : false;
 			
 			http.open(method, url, isAnsyc);
-			http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			http.onreadystatechange = function(){
 				if(4 == http.readyState){
 					if(200 == http.status){
@@ -76,6 +75,9 @@ var ajax = null;
 					}
 				}
 			};
+			if("post" == method){
+			  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			}
 			
 			var param = "";
 			if(paramAry && paramAry.length > 0){

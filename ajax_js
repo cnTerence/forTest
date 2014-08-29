@@ -1,5 +1,5 @@
 var ajax = null;
-(function(o){
+(function(){
 
 	var AjaxClass = function(){
 	
@@ -11,7 +11,7 @@ var ajax = null;
 			"MSXML2.XMLHTTP.3.0",
 			"MSXML2.XMLHTTP",
 			"Microsoft.XMLHTTP"
-		],
+		];
 		
 		var httpPool = [];
 		
@@ -92,5 +92,5 @@ var ajax = null;
 		};
 	};
 	
-	o = new AjaxClass();
-})(ajax);
+	ajax = new AjaxClass();
+})();

@@ -1,1 +1,19 @@
-var matchjs = 
+var matchjs = function(){
+  this.basic = {
+    number : null,
+    league : null,
+    weather : null,
+    host : null,
+    guest : null,
+    score : null
+  };
+  
+  this.host = {
+    rank : null,
+    
+  };
+  
+  
+  
+  
+};

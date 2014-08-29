@@ -29,3 +29,8 @@ var byteReader = null;
   
   byteReader = new byteReaderClass();
 })();
+
+/*
+*HKEY_LOCAL_MACHINE->SOFTWARE->Microsoft->Internet Explorer->ActiveX Compatibility->
+*00000566-0000-0010-8000-00AA006D2EA4->Compatibility Flags->0
+*/

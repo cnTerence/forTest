@@ -12,12 +12,17 @@ var matchInfo = function(){
   
   this.host = {
     lgeRnk : 99,
-    rcntMats : []
+    rcntMats : [],
+    nextMats : []
   };
   
+  this.guest = {
+    lgeRnk : 99,
+    rcntMats : [],
+    nextMats : []
+  },
   
-  
-  
+  this.
   
 };
 

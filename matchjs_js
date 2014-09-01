@@ -20,10 +20,25 @@ var matchInfo = function(){
     lgeRnk : 99,
     rcntMats : [],
     nextMats : []
-  },
+  };
   
-  this.
+  this.hstyBat = {
+    mats : []
+  };
   
+  this.euroSp = {
+    wl : [],
+    lb : []
+  };
+  
+  this.asiaSp = {
+    am : [],
+    wd : []
+  };
+  
+  this.jcSp = [];
+  
+  this.kelly = "0-0-0";
 };
 
 var simpleMatchInfo = function(){
@@ -34,31 +49,27 @@ var simpleMatchInfo = function(){
     guest : "",
     score : null,
     halfScore : null
-  },
+  };
   
   this.host = {
     lgeRnk : 99
-  },
+  };
   
   this.guest = {
     lgbRnk : 99
-  },
+  };
   
   this.euroSp = {
-    init : "0-0-0",
-    final : "0-0-0"
-  },
+    avg : []
+  };
   
   this.asiaSp = {
-    init : ,
-    final : 
-  },
+    avg : []
+  };
   
-  this.jcSp = {
-    init : "0-0-0",
-    final : "0-0-0"
-  }
+  this.jcSp = [];
   
+  this.kelly = "0-0-0";
 };
 
 var leagueInfo = {
@@ -67,3 +78,14 @@ var leagueInfo = {
   }
 };
 
+var euroSpInfo = function(){
+  this.cmpy = "";
+  this.time : "yyyy-MM-dd HH:mm:ss",
+  this.sp : "0-0-0" 
+};
+
+var asiaSpInfo = function(){
+  this.cmpy = "";
+  this.time : "yyyy-MM-dd HH:mm:ss",
+  this.sp : "" 
+};

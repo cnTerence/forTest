@@ -1,9 +1,9 @@
 var matchInfo = function(){
   this.basic = {
     matCd : "",
-    date : "yyyy-MM-dd",
+    date : "yyyy-MM-dd HH:mm:ss",
     matNbr : 999,
-    lgeType : "",
+    matType : "",
     weather : "",
     host : "",
     guest : "",
@@ -56,8 +56,8 @@ var matchInfo = function(){
 var simpleMatchInfo = function(){
   this.basic = {
     matCd : "",
-    date : "yyyy-MM-dd",
-    lgeType : "",
+    date : "yyyy-MM-dd HH:mm:ss",
+    matType : "",
     host : "",
     guest : "",
     score : null,

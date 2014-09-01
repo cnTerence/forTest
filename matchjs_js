@@ -1,18 +1,19 @@
-var matchjs = function(){
+var matchInfo = function(){
 
   this.basic = {
-    date : null,
-    number : null,
-    league : null,
-    weather : null,
-    host : null,
-    guest : null,
-    score : null
+    date : "yyyy-MM-dd",
+    number : 999,
+    league : "",
+    weather : "",
+    host : "",
+    guest : "",
+    score : null,
+    half-score : null
   };
   
   this.host = {
-    leagueRank : null,
-    
+    leagueRank : 99,
+    rcntMats : [],
     
     
   };
@@ -20,4 +21,14 @@ var matchjs = function(){
   
   
   
+};
+
+var simpleMatchInfo = function(){
+  this.basic = {
+    date : null,
+    host : ,
+    guest : ,
+    score : null,
+    half-score : null
+  }
 };

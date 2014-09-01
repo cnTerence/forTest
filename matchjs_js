@@ -81,10 +81,6 @@ var simpleMatchInfo = function(){
   };
   
   this.jcSp = [];
-  
-  this.euroKelly = "0-0-0";
-  
-  this.asiaKelly = "0-0-0";
 };
 
 var euroSpInfo = function(){

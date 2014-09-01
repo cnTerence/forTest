@@ -1,5 +1,4 @@
 var matchInfo = function(){
-
   this.basic = {
     date : "yyyy-MM-dd",
     number : 999,

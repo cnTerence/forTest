@@ -38,7 +38,7 @@ var matchInfo = function(){
   
   this.jcSp = [];
   
-  this.jcSpR = null;
+  this.jcSpR = [];
   
   this.kellyEuro = "0-0-0";
   
@@ -80,12 +80,6 @@ var simpleMatchInfo = function(){
   this.kellyAsia = "0-0-0";
 };
 
-var leagueInfo = {
-  ssnSttDt : {
-    "" : "yyyy-MM-dd"
-  }
-};
-
 var euroSpInfo = function(){
   this.cmpy = "";
   this.time : "yyyy-MM-dd HH:mm:ss",
@@ -97,3 +91,19 @@ var asiaSpInfo = function(){
   this.time : "yyyy-MM-dd HH:mm:ss",
   this.sp : "" 
 };
+
+var leagueParam = {
+  ssnSttDt : {
+    "" : "yyyy-MM-dd"
+  }
+};
+
+var globalParam = {
+  sttDt : "yyyy-MM-dd",
+  endDt : "yyyy-MM-dd",
+  bcdWl : "",
+  bcdLb : "",
+  urlBasic : "",
+  urlMat : "",
+  urlSp : ""
+}

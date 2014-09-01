@@ -85,14 +85,14 @@ var simpleMatchInfo = function(){
 
 var euroSpInfo = function(){
   this.cmpy = "";
-  this.time : "yyyy-MM-dd HH:mm:ss",
-  this.sp : "0-0-0" 
+  this.time = "yyyy-MM-dd HH:mm:ss";
+  this.sp = "0-0-0";
 };
 
 var asiaSpInfo = function(){
   this.cmpy = "";
-  this.time : "yyyy-MM-dd HH:mm:ss",
-  this.sp : "" 
+  this.time = "yyyy-MM-dd HH:mm:ss";
+  this.sp = "" ;
 };
 
 var leagueParam = {

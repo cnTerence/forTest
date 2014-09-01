@@ -13,10 +13,9 @@ var matchInfo = function(){
   
   this.host = {
     lgeRnk : 99,
-    rcntMats : [],
-    
-    
+    rcntMats : []
   };
+  
   
   
   
@@ -33,6 +32,14 @@ var simpleMatchInfo = function(){
     halfScore : null
   },
   
+  this.host = {
+    lgeRnk : 99
+  },
+  
+  this.guest = {
+    lgbRnk : 99
+  },
+  
   this.euroSp = {
     init : "0-0-0",
     final : "0-0-0"
@@ -43,7 +50,10 @@ var simpleMatchInfo = function(){
     final : 
   },
   
-  this.
+  this.jcSp = {
+    init : "0-0-0",
+    final : "0-0-0"
+  }
   
 };
 

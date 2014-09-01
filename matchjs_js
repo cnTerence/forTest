@@ -38,7 +38,13 @@ var matchInfo = function(){
   
   this.jcSp = [];
   
-  this.kelly = "0-0-0";
+  this.jcSpR = null;
+  
+  this.kellyEuro = "0-0-0";
+  
+  this.kellyAsia = "0-0-0";
+  
+  this.recmndn = "Y-Y-Y";
 };
 
 var simpleMatchInfo = function(){
@@ -69,7 +75,9 @@ var simpleMatchInfo = function(){
   
   this.jcSp = [];
   
-  this.kelly = "0-0-0";
+  this.kellyEuro = "0-0-0";
+  
+  this.kellyAsia = "0-0-0";
 };
 
 var leagueInfo = {

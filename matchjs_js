@@ -1,7 +1,8 @@
 var matchInfo = function(){
   this.basic = {
+    matCd : "",
     date : "yyyy-MM-dd",
-    number : 999,
+    matNbr : 999,
     lgeType : "",
     weather : "",
     host : "",
@@ -49,7 +50,8 @@ var matchInfo = function(){
 
 var simpleMatchInfo = function(){
   this.basic = {
-    date : null,
+    matCd : "",
+    date : "yyyy-MM-dd",
     lgeType : "",
     host : "",
     guest : "",
@@ -106,4 +108,4 @@ var globalParam = {
   urlBasic : "",
   urlMat : "",
   urlSp : ""
-}
+};

@@ -41,9 +41,14 @@ var matchInfo = function(){
   
   this.jcSpR = [];
   
-  this.kellyEuro = "0-0-0";
+  this.euroKelly = "0-0-0";
   
-  this.kellyAsia = "0-0-0";
+  this.asiaKelly = "0-0-0";
+  
+  this.odrAmt = {
+    bf : "0-0-0",
+    jc : "0-0-0"
+  };
   
   this.recmndn = "Y-Y-Y";
 };
@@ -77,9 +82,9 @@ var simpleMatchInfo = function(){
   
   this.jcSp = [];
   
-  this.kellyEuro = "0-0-0";
+  this.euroKelly = "0-0-0";
   
-  this.kellyAsia = "0-0-0";
+  this.asiaKelly = "0-0-0";
 };
 
 var euroSpInfo = function(){
@@ -107,5 +112,8 @@ var globalParam = {
   bcdLb : "",
   urlBasic : "",
   urlMat : "",
-  urlSp : ""
+  urlEuroSp : "",
+  urlAsiaSp : "",
+  urlOdrAmt : "",
+  urlKelly : ""
 };

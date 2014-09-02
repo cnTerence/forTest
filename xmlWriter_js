@@ -13,17 +13,17 @@ var xmlWriter = null;
     var createWriter = function(){
         if(window.ActiveXObject){
         
-          var xmlDoc = null;
+          var writer = null;
           var len = xmlVer.length;
           
-          for(var l = 0; l < len && !xmlDoc; l++){
+          for(var l = 0; l < len && !writer; l++){
             try{
-              xmlDoc = new ActiveXObject(xmlVer[l]);
+              writer = new ActiveXObject(xmlVer[l]);
             }catch(ex){
             }
           }
           
-          if(!xmlDoc){
+          if(!writer){
             alert("browser does not support ActiveXObject(for XMLDOM).");
             return null;
           }
@@ -34,16 +34,14 @@ var xmlWriter = null;
         }
     };
     
-    this.writeXml = function(fnc){
-    
+    this.writeXml = function(cntntEdtrFnc, savePath){
       var writer = createWriter();
       
-      
-      
-    
+      if(writer){
+        writer = cntntEdtrFnc(writer);
+        writer.save(savePath);
+      }
     }
-    
-  
   };
   
   xmlWriter = new xmlWriterClass();

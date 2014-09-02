@@ -10,7 +10,8 @@ var matchInfo = function(){
     score : null,
     halfScore : null,
     hostLge : "",
-    guestLge : ""
+    guestLge : "",
+    RType : ""
   };
   
   this.host = {

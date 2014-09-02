@@ -39,18 +39,19 @@ var matchInfo = function(){
     wd : []
   };
   
-  this.jcSp = [];
-  
-  this.jcSpR = [];
-  
-  this.euroKelly = "0-0-0";
-  
-  this.asiaKelly = "0-0-0";
+  this.jcSp = {
+    noR : [],
+    R : []
+  };
   
   this.odrAmt = {
     bf : "0-0-0",
     jc : "0-0-0"
   };
+  
+  this.euroKelly = "0-0-0";
+  
+  this.asiaKelly = "0-0-0";
   
   this.recmndn = "Y-Y-Y";
 };
@@ -84,7 +85,9 @@ var simpleMatchInfo = function(){
     avg : []
   };
   
-  this.jcSp = [];
+  this.jcSp = {
+    avg : []
+  };
 };
 
 var euroSpInfo = function(){

@@ -1,0 +1,50 @@
+var xmlWriter = null;
+(function(){
+  var xmlWriterClass = function(){
+  
+    var xmlVer = [
+      "MSXML2.DOMDocument.4.0",
+      "MSXML2.DOMDocument.3.0",
+      "MSXML2.DOMDocument.2.0",
+      "MSXML2.DOMDocument",
+      "Microsoft.XMLDOM"
+    ];
+    
+    var createWriter = function(){
+        if(window.ActiveXObject){
+        
+          var xmlDoc = null;
+          var len = xmlVer.length;
+          
+          for(var l = 0; l < len && !xmlDoc; l++){
+            try{
+              xmlDoc = new ActiveXObject(xmlVer[l]);
+            }catch(ex){
+            }
+          }
+          
+          if(!xmlDoc){
+            alert("browser does not support ActiveXObject(for XMLDOM).");
+            return null;
+          }
+          
+        }else{
+          alert("browser does not support ActiveXObject(for XMLDOM).");
+          return null;
+        }
+    };
+    
+    this.writeXml = function(fnc){
+    
+      var writer = createWriter();
+      
+      
+      
+    
+    }
+    
+  
+  };
+  
+  xmlWriter = new xmlWriterClass();
+})();

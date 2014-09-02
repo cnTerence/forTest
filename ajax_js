@@ -58,39 +58,42 @@ var ajax = null;
 		
 		this.sendHttp = function(url, scsCall, method, isAnsyc, paramAry, failCall){
 			var http = getHttpInstance();
-			method = method ? method : "get";
-			isAnsyc = isAnsyc ? isAnsyc : false;
 			
-			http.open(method, url, isAnsyc);
-			http.onreadystatechange = function(){
-				if(4 == http.readyState){
-					if(200 == http.status){
-						scsCall(http);
-					}else{
-						if(failCall){
-							failCall(http);
+			if(http){
+				method = method ? method : "get";
+				isAnsyc = isAnsyc ? isAnsyc : false;
+			
+				http.open(method, url, isAnsyc);
+				http.onreadystatechange = function(){
+					if(4 == http.readyState){
+						if(200 == http.status){
+							scsCall(http);
 						}else{
-							alert("Error: HTTP " + http.status + " " + http.statusText);
+							if(failCall){
+								failCall(http);
+							}else{
+								alert("Error: HTTP " + http.status + " " + http.statusText);
+							}
 						}
 					}
+				};
+				if("post" == method){
+			  	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				}
-			};
-			if("post" == method){
-			  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			}
 			
-			var param = "";
-			if(paramAry && paramAry.length > 0){
-				var len = paramAry.length;
-				for(var l = 0; l < len; l++){
-					if(l > 0){
-						param += "&";
+				var param = "";
+				if(paramAry && paramAry.length > 0){
+					var len = paramAry.length;
+					for(var l = 0; l < len; l++){
+						if(l > 0){
+							param += "&";
+						}
+						param += paramAry[l][0] + "=" + paramAry[l][1];
 					}
-					param += paramAry[l][0] + "=" + paramAry[l][1];
 				}
-			}
 			
-			http.send(param);
+				http.send(param);
+			}
 		};
 	};
 	

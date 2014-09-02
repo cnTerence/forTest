@@ -5,22 +5,22 @@ var byteReader = null;
     
     this.read = function(byteAry, crset){
       var stream = new ActiveXObject("adodb.stream");
-      //处理字节流
+      //process byte stream
       stream.Type = 1;
-      //读写模式
+      //r/w mode
       stream.Mode = 3;
-      //打开对象
+      //open the stream
       stream.Open();
-      //载入处理流
+      //load the stream
       stream.Write(byteAry);
       
-      //指针指向开始
+      //from start position
       stream.Position = 0;
-      //转换字符流处理
+      //transfer byte mode
       stream.Type = 2;
-      //设置字符集
+      //set charset
       stream.Charset = crset;
-      //读取字符
+      //read transfered data
       var data = stream.ReadText();
       stream.close();
       return data;

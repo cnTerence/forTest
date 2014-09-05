@@ -1,66 +1,66 @@
 var svnAnalyst = null;
 (function(){
 
-	var analyticClass = function(){
-	
-		var factors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-		var fctLen = factors.length;
-		var combs = {};
-		
-		var initCombs = function(mode){
-			
-			for(var i1 = 0; i1 < fctLen; i1++){
-				combs["'" + ary[i1] + "'"] = 0;
-				
-				for(var i2 = 0; i2 < fctLen; i2++){
-					combs["'" + ary[i1] + ary[i2] + "'"] = 0;
-					
-					for(var i3 = 0; i3 < fctLen; i3++){
-						combs["'" + ary[i1] + ary[i2] + ary[i3] + "'"] = 0;
-						
-						if(mode > 3){
-							for(var i4 = 0; i4 < fctLen; i4++){
-								combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + "'"] = 0;
-							
-								for(var i5 = 0; i5 < fctLen; i5++){
-									combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + "'"] = 0;
-									
-									//if(mode > 5){
-									//	for(var i6 = 0; i6 < fctLen; i6++){
-									//		combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + ary[i6] + "'"] = 0;
-									//
-									//		for(var i7 = 0; i7 < fctLen; i7++){
-									//			combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + ary[i6] + ary[i7] + "'"] = 0;
-									//		}
-									//	}
-									//}
-								}
-							}
-						}
-					}
-				}
-			}
-			
-		};
-		
-		this.countCombs = function(samples){
-			var len = samples.length;
-			var mode = samples[0].length;
-			initCombs(mode);
-			
-			for(var x = 0; x < len; x++){
-				for(var pos = 0; pos < len; pos++){
-					for(var cnt = 1; cnt <= len - pos; cnt++){
-						combs["'" + sample[x].substr(pos, cnt) + "'"] += 1;
-					}
-				}
-			}
-			
-			return combs;
-		};
-		
-	};
-	
-	svnAnalyst = new analyticClass();
-	
+  var analyticClass = function(){
+  
+    var factors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var fctLen = factors.length;
+    var combs = {};
+    
+    var initCombs = function(mode){
+      
+      for(var i1 = 0; i1 < fctLen; i1++){
+        combs["'" + ary[i1] + "'"] = 0;
+        
+        for(var i2 = 0; i2 < fctLen; i2++){
+          combs["'" + ary[i1] + ary[i2] + "'"] = 0;
+          
+          for(var i3 = 0; i3 < fctLen; i3++){
+            combs["'" + ary[i1] + ary[i2] + ary[i3] + "'"] = 0;
+            
+            if(mode > 3){
+              for(var i4 = 0; i4 < fctLen; i4++){
+                combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + "'"] = 0;
+                
+                for(var i5 = 0; i5 < fctLen; i5++){
+                  combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + "'"] = 0;
+                  
+                  //if(mode > 5){
+                  //  for(var i6 = 0; i6 < fctLen; i6++){
+                  //    combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + ary[i6] + "'"] = 0;
+                  //
+                  //    for(var i7 = 0; i7 < fctLen; i7++){
+                  //      combs["'" + ary[i1] + ary[i2] + ary[i3] + ary[i4] + ary[i5] + ary[i6] + ary[i7] + "'"] = 0;
+                  //    }
+                  //  }
+                  //}
+                }
+              }
+            }
+          }
+        }
+      }
+      
+    };
+    
+    this.countCombs = function(samples){
+      var len = samples.length;
+      var mode = samples[0].length;
+      initCombs(mode);
+      
+      for(var x = 0; x < len; x++){
+        for(var pos = 0; pos < len; pos++){
+          for(var cnt = 1; cnt <= len - pos; cnt++){
+            combs["'" + sample[x].substr(pos, cnt) + "'"] += 1;
+          }
+        }
+      }
+      
+      return combs;
+    };
+    
+  };
+  
+  svnAnalyst = new analyticClass();
+  
 })();
